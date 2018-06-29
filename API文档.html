@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>API</title>
+        <link rel="stylesheet" type="text/css" href="./statics/github2-rightpart.css" media="all">
+        <link rel="stylesheet" type="text/css" href="./statics/github1-contents.css">
+        <link rel="stylesheet" href="./statics/zTreeStyle.css" type="text/css">
+        <style>
+            .ztree li a.curSelectedNode {
+                padding-top: 0px;
+                background-color: #FFE6B0;
+                color: black;
+                height: 16px;
+                border: 1px #FFB951 solid;
+                opacity: 0.8;
+            }
+            .ztree{
+                overflow: auto;
+                height:100%;
+                min-height: 200px;
+                top: 0px;
+            }
+        </style>
+    </head>
+    <body style="">
+        <div>
+            <div style="width:30%;">
+                <ul id="tree" class="ztree" style="width: 260px; overflow: auto; position: fixed; z-index: 2147483647; border: 0px none; left: 0px; bottom: 0px;">
+                <!-- 目录内容在网页另存为之后将插入到此处 -->
+                </ul>
+            </div>
+            <div id="readme" style="width:70%;margin-left:25%;">
+                <article class="markdown-body">
+
+
+<!-- ***********************************************************内容分割线****************************************************************** -->
+
+把typora写好的Markdown的api文档， 导出成html， 并放到这里面
+到时候可以写一个脚本， 直接执行
+
+<!-- ***********************************************************内容分割线****************************************************************** -->
+
+
+                </article>
+            </div>
+        </div>
+    <script src="./statics/jquery-1.10.2.min.js"></script>
+    <script src="./statics/jquery.ztree.all-3.5.min.js"></script>
+    <script src="./statics/jquery.ztree_toc.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#tree').ztree_toc({
+                is_auto_number:false,
+                documment_selector:'.markdown-body',
+                is_expand_all: true
+            });
+        });
+    </script>
+    </body>
+</html>
